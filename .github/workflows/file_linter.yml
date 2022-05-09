@@ -7,8 +7,13 @@ jobs:
     name: Lint File Names
     runs-on: ubuntu-latest
     steps: 
+      - name: Check Out
+        uses: actions/checkout@master
+        with: 
+          ref: ${{ github.ref }}
+    
       - name: Run File-Linter
-        uses: orrynewell/Gaming_CICD@v1
+        uses: orrynewell/Gaming_CICD@master
         with: 
          path: './'
          pattern: ''
