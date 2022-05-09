@@ -1,0 +1,15 @@
+name: File-Linter
+
+on: push
+
+jobs:
+  file-lint:
+    name: Lint File Names
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Run File-Linter
+        uses: orrynewell/Gaming_CICD@v1
+        with: 
+         path: './'
+         pattern: ''
+         
